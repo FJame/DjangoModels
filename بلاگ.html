@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://quera.ir/course/assignments/2693/problems/16282/print -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>کار با Quera | بلاگ</title>
+    
+    <meta name="fontiran.com:license" content="LCTB2">
+    <link rel="shortcut icon" type="image/png" href="https://cdn.quera.ir/images/logo/favicon/favicon-16x16.4bcbe4f363d7.png">
+    
+
+<script type="text/javascript" async="" src="./بلاگ_files/hotjar-1222646.js.download"></script><script type="text/javascript" async="" src="./بلاگ_files/analytics.js.download"></script><script async="" type="text/javascript" src="./بلاگ_files/rg.complete.js.download"></script><script async="" src="./بلاگ_files/gtm.js.download"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TDRQP6V');</script>
+
+
+<meta name="yn-tag" id="c149392b-0daa-4fd2-afcc-7c0377328aec">
+<script>
+    !function (t, e, n) {
+            t.yektanetAnalyticsObject = n, t[n] = t[n] || function () {
+                t[n].q.push(arguments)
+            }, t[n].q = t[n].q || [];
+            var a = new Date, r = a.getFullYear().toString() + "0" + a.getMonth() + "0" + a.getDate() + "0" + a.getHours(),
+                c = e.getElementsByTagName("script")[0], s = e.createElement("script");
+            s.async = 1, s.type = "text/javascript", s.src = "https://cdn.yektanet.com/rg_woebegone/scripts/2382/rg.complete.js?v=" + r, c.parentNode.insertBefore(s, c)
+    }(window, document, "yektanet");
+</script>
+
+
+    <script type="text/javascript" src="./بلاگ_files/common.min.d02e49ecb223.js.download"></script><script async="" src="./بلاگ_files/modules.a9908aa3c13fd99c39c5.js.download"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
+    <link rel="stylesheet" type="text/css" href="./بلاگ_files/semantic.rtl.min.86a83355746a.css">
+    <link rel="stylesheet" type="text/css" href="./بلاگ_files/style.19682939d81d.css">
+    <link rel="stylesheet" type="text/css" href="./بلاگ_files/style.233c3f0ed3ba.css">
+    <script type="text/javascript" src="./بلاگ_files/main.46012e376e61.js.download"></script>
+    <script src="./بلاگ_files/prism.min.683a0944f523.js.download" data-manual=""></script><script src="./بلاگ_files/clipboard.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./بلاگ_files/prism.4fa8005e6de1.css">
+    <link rel="stylesheet" href="./بلاگ_files/katex.min.56f7a8590a41.css">
+    <style>
+        @page {
+            margin: 25mm 20mm;
+        }
+
+        @media print {
+            pre, code {
+                white-space: pre-wrap; /* Since CSS 2.1 */
+                white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+                white-space: -o-pre-wrap; /* Opera 7 */
+                word-wrap: break-word; /* Internet Explorer 5.5+ */
+            }
+        }
+
+        pre {
+            background-color: #dce8ec !important
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+<div class="qu-problem-segment">
+    <div style="display: none;" id="description_md-16282">**کار ها:**
+
+* نوشتن مدل نویسنده - ۱۳ نمره
+* نوشتن مدل پُستِ بلاگ - ۱۳ نمره
+* نوشتن مدل نظر - ۱۳ نمره
+* نوشتن تابع کپی پُست - ۲۰ نمره
+
+در این سوال می‌خواهیم مدل های اصلی یک بلاگ را پیاده سازی کنیم. برای این کار شما باید یک پروژه بسازید و یک App به نام `blog` در آن ایجاد کنید. برای راحتی شما ما این پروژه خام را ساخته ایم و شما می‌توانید آن را به عنوان قالب از [اینجا](http://bayanbox.ir/download/4488874724606199194/blog.zip) دانلود کنید و کد خود را در آن بنویسید.
+
+در این سوال شما فقط با فایل `models.py` که در پوشه blog قرار دارد، کار خواهید کرد.  
+شما باید ۳ مدل(model) به این فایل اضافه کنید:
+
+۱. مدل نویسنده: `Author`  
++ این مدل فقط دارای یک فیلدبه نام `name` است که از جنس رشته با حداکثر طول ۵۰ کارکتر است.
+
+۲. مدل پستِ بلاگ: `BlogPost`
++ این مدل دارای فیلد های زیر است:
+	+ عنوان `title`: از جنس رشته با حداکثر طول ۲۵۰ کارکتر است.
+	+ متن `body`: از جنس رشته با طول نا محدود است.
+	+ نویسنده `author`: که یک کلید خارجی به یک نویسنده است که نویسنده پست را مشخص می‌کند.
+	+ تاریخ ایجاد پست `date_created`: از نوع DateTimeField است که زمان دقیق ساخته شدن پست را نشان می‌دهد و توسط کاربر وارد **نمی‌شود**.
+
+۳. مدل نظر: `Comment`
++ این مدل دارای دو فیلد زیر است:
+	+ پست `blog_post`: این فیلد یک کلید خارجی به پستی است که این کامنت متعلق به آن است.
+	+ متن `text`: متن کامنت است که از نوع رشته با حدکثر طول ۵۰۰ کارکتر می‌باشد.
+
+**توجه:** این مدل ها باید به گونه ای نوشته شوند که اگر پست ای پاک شد همه‌ی کامنت های مربوط به آن پست نیز پاک شود. همچنین اگر نویسنده ای پاک شد، همه پست های آن نویسنده به همراه کامنت هایش پاک شود.
+
+**تابع کپی:**
+بعد از ساختن مدل های بالا یک تابع به نام `()copy` به مدل BlogPost اضافه کنید. این تابع آرگومان ورودی ندارد و یک کپی از مدل موردنظر می‌گیرد. به این صورت که کل پست به همراه همه کامنت هایش را کاملا کپی می‌کند. تاریخ پست کپی شده جدید، به تاریخ فعلی تغییر می‌کند. **این تابع در نهایت id بلاگ پست جدید را باز‌ می‌گرداند.**
+
+*برای مثال اگر تنها یک نویسنده به نام محمد و یک پست با تاریخ ۱۸ مهر به همراه ۳ کامنت در پایگاه داده وجود داشته باشد، بعد از کپی شدن پست در تاریخ ۲۰ مهر، هنوز یک نویسنده در پایگاه داده هست ولی تعداد پست ها ۲ و تعداد کامنت ها ۶ خواهد بود (هر پست ۳ کامنت مجزا) که تاریخ پست جدید ۲۰ مهر است.*
+
+**فایل آپلودی**
+
+یک فایل zip. که درون آن یک پوشه `blog` وجود دارد و در این پوشه فقط یک فایل `models.py` قرار دارد. توجه کنید در صورتی که فایل‌های اضافی ارسال کنید، حذف خواهند شد.
+
+```
+&lt;Your-zip-name&gt;.zip
+   └── blog
+        └── models.py
+```</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>بلاگ</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-16282"><p dir="auto"><strong>کار ها:</strong></p>
+<ul dir="auto">
+<li>نوشتن مدل نویسنده - ۱۳ نمره</li>
+<li>نوشتن مدل پُستِ بلاگ - ۱۳ نمره</li>
+<li>نوشتن مدل نظر - ۱۳ نمره</li>
+<li>نوشتن تابع کپی پُست - ۲۰ نمره</li>
+</ul>
+<p dir="auto">در این سوال می‌خواهیم مدل های اصلی یک بلاگ را پیاده سازی کنیم. برای این کار شما باید یک پروژه بسازید و یک App به نام <code dir="ltr">blog</code> در آن ایجاد کنید. برای راحتی شما ما این پروژه خام را ساخته ایم و شما می‌توانید آن را به عنوان قالب از <a href="http://bayanbox.ir/download/4488874724606199194/blog.zip">اینجا</a> دانلود کنید و کد خود را در آن بنویسید.</p>
+<p dir="auto">در این سوال شما فقط با فایل <code dir="ltr">models.py</code> که در پوشه blog قرار دارد، کار خواهید کرد.<br>شما باید ۳ مدل(model) به این فایل اضافه کنید:</p>
+<p dir="auto">۱. مدل نویسنده: <code dir="ltr">Author</code>  </p>
+<ul dir="auto">
+<li>این مدل فقط دارای یک فیلدبه نام <code dir="ltr">name</code> است که از جنس رشته با حداکثر طول ۵۰ کارکتر است.</li>
+</ul>
+<p dir="auto">۲. مدل پستِ بلاگ: <code dir="ltr">BlogPost</code></p>
+<ul dir="auto">
+<li>این مدل دارای فیلد های زیر است:<ul>
+<li>عنوان <code dir="ltr">title</code>: از جنس رشته با حداکثر طول ۲۵۰ کارکتر است.</li>
+<li>متن <code dir="ltr">body</code>: از جنس رشته با طول نا محدود است.</li>
+<li>نویسنده <code dir="ltr">author</code>: که یک کلید خارجی به یک نویسنده است که نویسنده پست را مشخص می‌کند.</li>
+<li>تاریخ ایجاد پست <code dir="ltr">date_created</code>: از نوع DateTimeField است که زمان دقیق ساخته شدن پست را نشان می‌دهد و توسط کاربر وارد <strong>نمی‌شود</strong>.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">۳. مدل نظر: <code dir="ltr">Comment</code></p>
+<ul dir="auto">
+<li>این مدل دارای دو فیلد زیر است:<ul>
+<li>پست <code dir="ltr">blog_post</code>: این فیلد یک کلید خارجی به پستی است که این کامنت متعلق به آن است.</li>
+<li>متن <code dir="ltr">text</code>: متن کامنت است که از نوع رشته با حدکثر طول ۵۰۰ کارکتر می‌باشد.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>توجه:</strong> این مدل ها باید به گونه ای نوشته شوند که اگر پست ای پاک شد همه‌ی کامنت های مربوط به آن پست نیز پاک شود. همچنین اگر نویسنده ای پاک شد، همه پست های آن نویسنده به همراه کامنت هایش پاک شود.</p>
+<p dir="auto"><strong>تابع کپی:</strong>
+بعد از ساختن مدل های بالا یک تابع به نام <code dir="ltr">()copy</code> به مدل BlogPost اضافه کنید. این تابع آرگومان ورودی ندارد و یک کپی از مدل موردنظر می‌گیرد. به این صورت که کل پست به همراه همه کامنت هایش را کاملا کپی می‌کند. تاریخ پست کپی شده جدید، به تاریخ فعلی تغییر می‌کند. <strong>این تابع در نهایت id بلاگ پست جدید را باز‌ می‌گرداند.</strong></p>
+<p dir="auto"><em>برای مثال اگر تنها یک نویسنده به نام محمد و یک پست با تاریخ ۱۸ مهر به همراه ۳ کامنت در پایگاه داده وجود داشته باشد، بعد از کپی شدن پست در تاریخ ۲۰ مهر، هنوز یک نویسنده در پایگاه داده هست ولی تعداد پست ها ۲ و تعداد کامنت ها ۶ خواهد بود (هر پست ۳ کامنت مجزا) که تاریخ پست جدید ۲۰ مهر است.</em></p>
+<p dir="auto"><strong>فایل آپلودی</strong></p>
+<p dir="auto">یک فایل zip. که درون آن یک پوشه <code dir="ltr">blog</code> وجود دارد و در این پوشه فقط یک فایل <code dir="ltr">models.py</code> قرار دارد. توجه کنید در صورتی که فایل‌های اضافی ارسال کنید، حذف خواهند شد.</p>
+<pre dir="ltr"><code>&lt;Your-zip-name&gt;.zip
+   └── blog
+        └── models.py</code></pre></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-16282', 'description_html-16282');
+    });
+</script>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // open all <details> tags
+        $('details').attr('open', '');
+        // print!
+        window.print();
+    });
+</script>
+<iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./بلاگ_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="ads"></div></body></html>
